@@ -28,6 +28,7 @@ int Size(node a)
     {                // vòng lặp chạy khi nào a chưa phải là NULL tức là a trỏ vào null thì vòng lặp kết thúc
         a = a->next; // gán địa chỉ của node tiếp theo cho node hiện tại, cho node hiện tại nhảy sang node tiếp theo
     }
+    return cnt;
 }
 // thêm một phần tử vào đầu danh sách liên kết
 void insertFirst(node &a, int x)
@@ -71,7 +72,7 @@ void insertMid(node &a, int x, int pos)
     {
         cout << "vi tri ko hop le:";
     }
-    if (n = 1)
+    if (n == 1)
     {
         insertFirst(a, x);
         return;
@@ -108,7 +109,7 @@ void delLast(node &a)
         truoc = sau; // con trỏ gần node cuối
         sau = sau->next;
     }
-    if (truoc = NULL)
+    if (truoc == NULL)
     {
         a = NULL; // xóa phần tử danh sách có một phần tử
     }
@@ -129,7 +130,7 @@ void delMid(node &a, int pos)
         truoc = sau;
         sau = sau->next;
     }
-    if (truoc = NULL)
+    if (truoc == NULL)
     {
         a = a->next; // xóa phần tử danh sách có một phần tử
     }
@@ -151,6 +152,69 @@ void in(node a)
 int main()
 {
     node head = NULL; ///// head là th đầu tiên nó là con trỏ null khi đó danh sách liên kết rỗng
+    while (1)
+    {
+        cout << "-----------------MENU---------------\n";
+        cout << "1. Chen phan tu vao dau danh sach\n";
+        cout << "2. Chen phan tu vao cuoi danh sach\n";
+        cout << "3. Chen phan tu vao giua danh sach\n";
+        cout << "4. Xoa phan tu o dau\n";
+        cout << "5. Xoa phan tu o cuoi\n";
+        cout << "6. Xoa phan tu o giua\n";
+        cout << "7. Duyet danh sach lient ket\n";
+        cout << "0.Thoát chương trình\n";
+        cout << "Nhập lựa chọn:";
+        int lc;
 
+        cin >> lc;
+        cin.ignore();
+        if (lc == 1)
+        {
+            int gt;
+            cout << "Nhập giá trị cần chèn: ";
+            cin >> gt;
+            insertFirst(head, gt);
+        }
+        else if (lc == 2)
+        {
+            int gt;
+            cout << "Nhập giá trị cần chèn: ";
+            cin >> gt;
+            insertLast(head, gt);
+        }
+        else if (lc == 3)
+        {
+            int gt, pos;
+            cout << "Nhập giá trị cần chèn: ";
+            cin >> gt;
+            cout << "Nhập vị trí cần thêm: ";
+            cin >> pos;
+            insertMid(head, gt, pos);
+        }
+        else if (lc == 4)
+        {
+            delFirst(head);
+        }
+        else if (lc == 5)
+        {
+            delLast(head);
+        }
+        else if (lc == 6)
+        {
+            int pos;
+            cout << "Nhập ví trí cần xoá: ";
+            cin >> pos;
+            delMid(head, pos);
+        }
+        else if (lc == 7)
+        {
+            in(head);
+        }
+        else if (lc == 0)
+        {
+            break;
+        }
+    }
+    return 0;
     // cout << sizeof(Node) << endl;
 }

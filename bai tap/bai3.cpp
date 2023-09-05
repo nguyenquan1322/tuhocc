@@ -15,7 +15,7 @@ int main()
     {
         int num;
         cin >> num;
-        if (num > 0 && num < 999999999 && checkSo(num))
+        if (num > 0 && num <= 999999999 && checkSo(num))
         {
             cout << "YES" << endl;
         }
