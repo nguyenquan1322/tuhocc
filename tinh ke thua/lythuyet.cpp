@@ -1,5 +1,6 @@
-Kế thừa trong lập trình hướng đối tượng chính là thừa hưởng lại những thuộc tính và phương thức của một lớp.Có nghĩa là nếu lớp A kế thừa lớp B thì lớp A sẽ có những thuộc tính và phương thức của lớp B.Do đó, từ sơ đồ trên bạn có thể tách các thuộc tính và phương thức trùng nhau
-                                                                                                                                                                                                                     ra một lớp mới tên là Person và cho lớp Student và Teacher kế thừa lớp này giống như sau :
+Kế thừa trong lập trình hướng đối tượng chính là thừa hưởng lại những thuộc tính và phương thức của một lớp.Có nghĩa là nếu lớp A kế thừa lớp B thì lớp A sẽ có những thuộc tính và phương thức của lớp B.Do đó,
+    từ sơ đồ trên bạn có thể tách các thuộc tính và phương thức trùng nhau
+        ra một lớp mới tên là Person và cho lớp Student và Teacher kế thừa lớp này giống như sau :
 
 #include <iostream>
 

@@ -68,8 +68,7 @@ int main()
             }
         }
     }
-
-    cout << "Mang da sap xep tang dan: ";
+    cout << "mang tang dan la: " << endl;
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
